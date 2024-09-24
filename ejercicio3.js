@@ -1,16 +1,18 @@
 // Diseña un algoritmo que cuente las veces que aparece una determinada letra en una frase
 
-/*const cuentaNombres = (cadena) => cadena.split(" ").length;
+function contarLetra(frase, letra) {
+    let contador = 0;
 
-console.log(cuentaNombres("Alvaro Hans Orellana Dalsgaard-Bohsen")); */
+    for (let i = 0; i < frase.length; i++) {
+      if (frase[i] === letra) {
+        contador++;
+      }
+    }
 
-function cuentaCaracteres(nombre) {
-    return nombre.count("");
-}
-console.log(cuentaCaracteres("Juan"));
+    return contador;
+  }
 
-
-
-/*const cuentaLetras = (cadena) => cadena.count("").lenght;
-
-console.log(cuentaLetras("jose Luis");*/
+  const frase = "que dia tan largo";
+  const letra = "o";
+  const resultado = contarLetra(frase, letra);
+  console.log(`La letra "${letra}" aparece ${resultado} veces en la frase.`);
