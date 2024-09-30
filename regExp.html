@@ -1,0 +1,65 @@
+<!--Validation email Regular Expression;
+
+Que empiece por letra o número, y tenga al menos un carácter Para el dominio (ej. @hotmail @gmail):
+ Que tenga @
+ Que tenga sólo letras, y al menos tres caracteres Para el dominio padre (ej. .es .com .org)
+ Podrá tener dos (.es, .fr, .it,…) o tres letras (.com, .net, .org,..) o cuatro (.mobi, info,…)
+ Debe ir al final, detrás de un punto *La expresión regular sería algo como: expresionregular@expresionregular.expresionregular. Ej: elena@gmail.com;
+pepe03@hotmail.es Crearemos un formulario que llamará a la función checkEmail. Esta función será la que ejecute la
+expresión regular. Se le pasará como argumento el valor del email recogido.
+ Patrón RegExp: expresionregular@expresionregular.expresionregular -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Correo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+
+        label,
+        input {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Validación de Correo Electrónico</h2>
+    <label id="emailForm">
+        <label for="email">Introduce tu correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Introduce tu contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="button" onclick="resultadoFinal()">Validar</button>
+        </form>
+        <p id="result"></p>
+
+        <script>
+            function resultadoFinal(checkEmail, checkPassword) {
+                const email = document.getElementById("email").value;
+                const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z]{3,}\.[a-zA-Z]{2,4}$/;
+
+                const password = document.getElementById("password").value;
+                const passwordPattern = /^[a-zA-Z0-9]{8,}$/;
+
+                const resultElement = document.getElementById("result");
+                if (emailPattern.test(email) && passwordPattern.test(password)) {
+                    resultElement.innerHTML = "Válido";
+                    resultElement.style.color = "green";
+                } else {
+                    resultElement.innerHTML = "No válido";
+                    resultElement.style.color = "red";
+                }   
+            }
+
+        </script>
+</body>
+
+</html>
