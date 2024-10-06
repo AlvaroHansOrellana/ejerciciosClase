@@ -1,24 +1,64 @@
-// let myArray = [5, 1, 3, 5, 2, 3, 4, 1];
-// function myArray () {
-//     return myArray.length;
-    
+
+// let edad = 18;
+// let mensaje = edad >= 18 ? 'Mayor de edad' : 'Menor de edad';
+// console.log(mensaje);
+
+// let edad = 18;
+// let mensaje;
+// if (edad >= 18) {
+//     mensaje = 'Mayor de edad';
+// } else {
+//     mensaje = 'Menor de edad'
 // }
 
-// console.count(myArray);
-// return array.count.lenght;
+// console.log(mensaje);
 
-// function cuentaNombres(cadena) {
-//     return cadena.split(" ").length;
-//     }
-// console.log(cuentaNombres("Alvaro Hans Orellana Dalsgaard-Bohsen"));
+// _____________________________
 
-// function imprimirImpares(numero) {
-//     for (let i = numero; i <= numero + 50; i++) {
-//       if (i % 2 !== 0) console.log(i); 
-//     }
-//   }
-//   console.log(imprimirImpares(15));
-
-// for (let i = array; i <= array.lenght == i++) {
-//     if (myArray 
+// switch (expresión) {
+//     case valor1:
+//         break;
+//     case valor2:
+//         break;
+//     default:
 // }
+
+// console.log();
+
+// ____________________________________________________________
+
+// let color = 'rojo';
+
+// switch (color) {
+//     case 'rojo':
+//         console.log('Color rojo');
+//     case 'verde':
+//         console.log('Color verde');
+//     case 'azul':
+//         console.log('Color azul');
+//     default:
+//         console.log('Color desconocido'); 
+// }
+
+// ___________________________________________________
+
+// FUNCIONES FLECHA ---------------------->
+
+let suma = function (a, b) { // FUNCION NORMAL
+    return a + b;
+};
+
+let sumas = (a, b) => a + b; // LO MISMO PERO EN FLECHA
+
+PRÁCTICAS
+
+let ejemplo1 = function (num, array) {
+    return num + array;
+};
+
+let ejemplo2 = (num, array) => num + array;
+
+
+
+
+
