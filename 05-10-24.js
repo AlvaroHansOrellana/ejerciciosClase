@@ -4,17 +4,17 @@
 
 function crearTabla(numero) {
     let array = [];
-    for (let i = 1; i < 10; i++) {
+    for (let i = 1; i <= 10; i++) {
         array.push(numero + "x" + i + "=" + (numero * i));
     }
     return array;
 }
 
-console.log(crearTabla(1, 3, 6, 7));
+console.log(crearTabla(3));
 
 // Ejercicio 2
 // Crea una función que pida números por teclado (prompt) y mételos en un array. Cuando el usuario meta un 0, dejaremos de insertar(habrá que usar un bucle que pregunte constantemente). Por último, ordena los números ordenados de menor a mayor y devuelve el array. Prompt() devuelve un string. hay que convertirlo a entero con parseInt()
-
+    //  NOT MINE :(
 function pedirNumeros() {
     let numeros = []; 
     let numero; 
@@ -39,3 +39,13 @@ console.log(resultado); // Muestra el array ordenado en la consola
 // Ejercicio 3:
 // Escriba un programa que pida un año y que escriba si es bisiesto o no. Se recuerda que los años bisiestos son múltiplos de 4, pero los múltiplos de 100 no lo son, aunque los múltiplos de 400 sí.
 
+function esBisiesto(anio) {
+    if ((anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0) {
+      return `${anio} es un año bisiesto.`;
+    } else {
+      return `${anio} no es un año bisiesto.`;
+    }
+  }
+  
+  const anio = 1992;
+  console.log(esBisiesto(anio));
